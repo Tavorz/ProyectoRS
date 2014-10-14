@@ -1,14 +1,25 @@
 <?php
- class Mantenimiento_model extends CI_Model {
  
- function Mantenimiento_model() {
- parent::__construct(); //llamada al constructor de Model.
+class Mantenimiento extends CI_Controller {
+ 
+ public function __construct() {
+ parent::__construct();
  }
  
-function getData() {
- $usuarios = $this->db->get('profesor'); //obtenemos la tabla 'contacto'. db->get('nombre_tabla') equivale a SELECT * FROM nombre_tabla.
+ function index() {
+ $this->load->model('mantenimiento_model'); //cargamos el modelo
  
- return $usuarios->result(); //devolvemos el resultado de lanzar la query.
+ $data['page_title'] = "Holis";
+ 
+ //Obtener datos de la tabla 'contacto'
+ $usuarios = $this->mantenimiento_model->getData(); //llamamos a la función getData() del modelo creado anteriormente.
+ 
+ $data['usuarios'] = $usuarios;
+ 
+ //load de vistas
+ $this->load->view('mantenimiento_view', $data); //llamada a la vista, que crearemos posteriormente
  }
+ 
 }
+ 
 ?>
