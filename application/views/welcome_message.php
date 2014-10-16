@@ -1,4 +1,7 @@
 <!DOCTYPE html>
+<?php 
+session_start(); 
+ ?>
 <html lang="en">
 <head>
 	<meta charset="utf-8">
@@ -67,16 +70,19 @@
 <body>
 
 <div id="container">
-	<h1>Welcome to CodeIgniter!</h1>
+	<h1>Bienvenido</h1>
 
 	<div id="body">
-		<p>The page you are looking at is being generated dynamically by CodeIgniter.</p>
+		<p>Sistema de  Gestión de Bitacoras</p>
 
-		<p>If you would like to edit this page you'll find it located at:</p>
-		<code>application/views/welcome_message.php</code>
-
-		<p>The corresponding controller for this page is found at:</p>
-		<code>application/controllers/welcome.php</code>
+		<p>Inicio de sesión:</p>
+		<code>
+			<form action="" method="post" class="login"> 
+    <div><label>Username</label><input name="user" type="text" ></div> 
+    <div><label>Password</label><input name="password" type="password"></div> 
+    <div><input name="login" type="submit" value="login"></div> 
+</form>
+		</code>
 
 		<p>If you are exploring CodeIgniter for the very first time, you should start by reading the <a href="user_guide/">User Guide</a>.</p>
 	</div>
