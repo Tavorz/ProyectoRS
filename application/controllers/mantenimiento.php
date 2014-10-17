@@ -1,6 +1,6 @@
 <?php
  
-class mantenimiento extends CI_Controller {
+class Mantenimiento extends CI_Controller {
  
  public function __construct() {
  parent::__construct();
@@ -19,11 +19,9 @@ class mantenimiento extends CI_Controller {
  //load de vistas
  $this->load->view('mantenimiento_view', $data); //llamada a la vista, que crearemos posteriormente
  }
- 
-}
 
 
-function alta() {
+	function alta() {
  //recogemos los datos obtenidos por POST
  $data['RFC'] = $_POST['txtRFC'];
  $data['cargoID'] = $_POST['txtCargo'];
@@ -47,6 +45,17 @@ function alta() {
  //mostramos la vista de nuevo.
  $this->index();
  }
+ 
+ function agregar(){
+ 	echo "Agregar";
+ }
+ 
+}
+
+
+
+
+
  
 
 

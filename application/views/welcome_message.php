@@ -5,7 +5,7 @@ session_start();
 <html lang="en">
 <head>
 	<meta charset="utf-8">
-	<title>Welcome to CodeIgniter</title>
+	<title>Bienvenido al Super Sistema de Bitacoras</title>
 
 	<style type="text/css">
 
@@ -78,16 +78,16 @@ session_start();
 		<p>Inicio de sesión:</p>
 		<code>
 			<form action="" method="post" class="login"> 
-    <div><label>Username</label><input name="user" type="text" ></div> 
+    <div><label>Email</label><input name="txtcorreoElectronico" type="text" ></div> 
     <div><label>Password</label><input name="password" type="password"></div> 
     <div><input name="login" type="submit" value="login"></div> 
 </form>
 		</code>
 
-		<p>If you are exploring CodeIgniter for the very first time, you should start by reading the <a href="user_guide/">User Guide</a>.</p>
+		<p>Proximamente va a estar bien bonis</a>.</p>
 	</div>
 
-	<p class="footer">Page rendered in <strong>{elapsed_time}</strong> seconds</p>
+	<p class="footer">Derechos reservados</p>
 </div>
 
 </body>

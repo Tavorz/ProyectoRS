@@ -37,7 +37,7 @@
  <input type="submit" value="Editar" />
  </form>
 
- <form name="alta" action="mantenimiento.php" method="POST">
+ <form name="alta" action="http://localhost/ProyectoRS/index.php/mantenimiento/alta" method="POST">
  <table>
  <tr>
  <td>RFC</td>

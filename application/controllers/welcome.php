@@ -19,6 +19,7 @@ class Welcome extends CI_Controller {
 	 */
 	public function index()
 	{
+		$this->load->model('mantenimiento_model');
 		$this->load->view('welcome_message');
 	}
 }
