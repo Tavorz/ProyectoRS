@@ -1,8 +1,5 @@
 <!DOCTYPE html>
-<?php 
-session_start(); 
- ?>
-<html lang="en">
+<html>
 <head>
 	<meta charset="utf-8">
 	<title>Bienvenido al Super Sistema de Bitacoras</title>
@@ -76,13 +73,16 @@ session_start();
 		<p>Sistema de  Gestión de Bitacoras</p>
 
 		<p>Inicio de sesión:</p>
-		<code>
-			<form action="" method="post" class="login"> 
-    <div><label>Email</label><input name="txtcorreoElectronico" type="text" ></div> 
-    <div><label>Password</label><input name="password" type="password"></div> 
-    <div><input name="login" type="submit" value="login"></div> 
-</form>
-		</code>
+		<?php echo validation_errors(); ?>
+		<?php echo form_open('verifylogin'); ?>
+		     <label for="correo">Usuario:</label>
+		     <input type="text" size="20" id="correo" name="correo"/>
+		     <br/>
+		     <label for="password">Password:</label>
+		     <input type="password" size="20" id="passowrd" name="password"/>
+		     <br/>
+		     <input type="submit" value="Login"/>
+		   </form>
 
 		<p>Proximamente va a estar bien bonis</a>.</p>
 	</div>
@@ -92,3 +92,4 @@ session_start();
 
 </body>
 </html>
+

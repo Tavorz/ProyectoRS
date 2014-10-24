@@ -29,6 +29,7 @@ class Mantenimiento extends CI_Controller {
  $data['apellidoPaterno'] = $_POST['txtApellidoPaterno'];
  $data['apellidoMaterno'] = $_POST['txtApellidoMaterno'];
  $data['correoElectronico'] = $_POST['txtEmail'];
+ $data['password'] = md5($_POST['txtEmail']);
  //llamamos al modelo, concretamente a la función insert() para que nos haga el insert en la base de datos.
  $this->load->model('mantenimiento_model');
  $this->mantenimiento_model->insert($data);

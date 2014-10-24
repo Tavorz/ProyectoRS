@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
+	<meta charset="UTF-8">
 	<title><?=$page_title?></title>
 </head>
 <body>
@@ -37,7 +38,7 @@
  <input type="submit" value="Editar" />
  </form>
 
- <form name="alta" action="http://localhost/ProyectoRS/index.php/mantenimiento/alta" method="POST">
+ <form name="alta" action="http://localhost/ProyectoRS/index.php/mantenimiento/alta" method="POST" accept-charset="UTF-8">
  <table>
  <tr>
  <td>RFC</td>

@@ -25,12 +25,12 @@ function getData() {
  $this->db->set('apellidoPaterno', $data['apellidoPaterno']);
  $this->db->set('apellidoMaterno', $data['apellidoMaterno']);
  $this->db->set('correoElectronico', $data['correoElectronico']);
- $this->db->set('password', $data['correoElectronico']);
+ $this->db->set('password', $data['password']);
  $this->db->insert('profesor');
  }
 
- function baja ($nombre) {
- $this->db->where('nombre', $nombre);
+ function baja ($RFC) {
+ $this->db->where('RFC', $RFC);
  $this->db->delete('profesor');
  }
 }
