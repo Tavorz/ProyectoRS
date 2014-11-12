@@ -1,0 +1,85 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>Administrador de Juntas</title>
+<meta name="keywords" content="" />
+<meta name="description" content="" />
+<link href="http://fonts.googleapis.com/css?family=Source+Sans+Pro:200,300,400,600,700,900" rel="stylesheet" />
+<link href="css/estilo.css" rel="stylesheet" type="text/css" media="all" />
+<link href="css/fonts.css" rel="stylesheet" type="text/css" media="all" />
+</head>
+<body>
+<div id="page" class="container">
+	<div id="header">
+		<div id="logo">
+			<a href="index.html"> <img src="../images/itm.png" alt="" /></a>
+			<h1>Administración del Sistema de Control de Bitacoras</h1>
+		</div>
+		<div id="menu">
+			<ul>
+				<li><a href="index_admon.html">Inicio</a></li>
+				<li class="current_page_item"><a href="reg_juntas.html" target="_blank">registrar Junta</a></li>
+				<li><a href="juntas.html">Juntas</a></li>
+				<li><a href="profesores.html">Profesores</a></li>
+                <li><a href="administradores.html">Administradores</a></li>
+              <li><a href="#title">Cerrar Sesión</a></li>
+			</ul>
+		</div>
+	</div>
+	<div id="main">
+	  <div id="featured">
+		  <div class="title">
+				<h2>Registrar Nueva Junta</h2>
+			</div>
+            <div id="container">
+              <form id="form1" method="post" action="">
+                <table width="100%" border="0">
+                  <tr>
+                    <td><div align="right">Fecha:</div></td>
+                    <td><label for="fecha"></label>
+                      <div align="left">
+                        <label for="fecha2"></label>
+                        <select name="fecha" id="fecha2">
+                        </select>
+                    </div></td>
+                  </tr>
+                  <tr>
+                    <td><div align="right">Hora:</div></td>
+                    <td><label for="hora"></label>
+                      <div align="left">
+                        <label for="hora"></label>
+                        <select name="hora" id="hora">
+                        </select>
+                    </div></td>
+                  </tr>
+                  <tr>
+                    <td><div align="right">Descripción:</div></td>
+                    <td><label for="descripcion"></label>
+                      <div align="left">
+                        <textarea name="descripcion" id="descripcion" cols="45" rows="5"></textarea>
+                    </div></td>
+                  </tr>
+                  <tr>
+                    <td><div align="right">Tópicos de Junta:</div></td>
+                    <td><label for="textarea"></label>
+                      <div align="left">
+                        <textarea name="textarea" id="textarea" cols="45" rows="5"></textarea>
+                    </div></td>
+                  </tr>
+                  <tr>
+                    <td colspan="2"><div align="center">
+                      <input type="submit" name="button" id="button" value="          Registrar Junta          " />
+                    </div></td>
+                  </tr>
+                </table>
+              </form>
+            </div>
+		</div>
+		<div id="copyright">
+			<span>&copy; Derechos Reservados Instituto Tecnológico de Morelia</span>
+		</div>
+	</div>
+</div>
+</body>
+</html>

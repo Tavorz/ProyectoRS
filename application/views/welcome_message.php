@@ -1,95 +1,68 @@
 <!DOCTYPE html>
-<html>
-<head>
-	<meta charset="utf-8">
-	<title>Bienvenido al Super Sistema de Bitacoras</title>
+	<html>
+		<head>
+			<meta charset="utf-8">
+			<title>Bienvenido al Super Sistema de Bitacoras</title>
+			<link href="http://fonts.googleapis.com/css?family=Source+Sans+Pro:200,300,400,600,700,900" rel="stylesheet" />
+			<link href="" rel="stylesheet" type="text/css" media="all" />
+			<link href="<?php echo base_url('css/fonts.css') ?>" rel="stylesheet" type="text/css" media="all" />
+			<link rel="stylesheet" type="text/css" href="<?php echo base_url('css/estilo.css'); ?>">			
+		</head>
+		<body>
+			<div id="page" class="container">
+				<div id="header">
+					<div id="logo">
+						<a href="index.html"> <img src="<?php echo base_url('images/itm.png'); ?>" alt="" /></a>
+						<h1>Sistema de Control de Bitacoras</h1>
+					</div>
+					<div id="menu">
+						<ul>
+							<li><a href="index.html">Inicio</a></li>
+							<li><a href="http://www.itmorelia.edu.mx" target="_blank">ITM Oficial</a></li>
+							<li><a href="proximas_juntas.html">Próximas Juntas</a></li>
+							<li class="current_page_item"><a href="#title">Iniciar Sesión</a></li>
+						</ul>
+					</div>
+				</div>
+				<div id="main">
+					<div id="banner">
+						<img src="<?php echo base_url('images/itm2.png'); ?>" alt="" class="image-full" />
+					</div>
+					<div id="featured">
+						<div class="title">
+							<h2>Iniciar Sesión</h2>
+						</div>
+			            <div id="container">
 
-	<style type="text/css">
-
-	::selection{ background-color: #E13300; color: white; }
-	::moz-selection{ background-color: #E13300; color: white; }
-	::webkit-selection{ background-color: #E13300; color: white; }
-
-	body {
-		background-color: #fff;
-		margin: 40px;
-		font: 13px/20px normal Helvetica, Arial, sans-serif;
-		color: #4F5155;
-	}
-
-	a {
-		color: #003399;
-		background-color: transparent;
-		font-weight: normal;
-	}
-
-	h1 {
-		color: #444;
-		background-color: transparent;
-		border-bottom: 1px solid #D0D0D0;
-		font-size: 19px;
-		font-weight: normal;
-		margin: 0 0 14px 0;
-		padding: 14px 15px 10px 15px;
-	}
-
-	code {
-		font-family: Consolas, Monaco, Courier New, Courier, monospace;
-		font-size: 12px;
-		background-color: #f9f9f9;
-		border: 1px solid #D0D0D0;
-		color: #002166;
-		display: block;
-		margin: 14px 0 14px 0;
-		padding: 12px 10px 12px 10px;
-	}
-
-	#body{
-		margin: 0 15px 0 15px;
-	}
-	
-	p.footer{
-		text-align: right;
-		font-size: 11px;
-		border-top: 1px solid #D0D0D0;
-		line-height: 32px;
-		padding: 0 10px 0 10px;
-		margin: 20px 0 0 0;
-	}
-	
-	#container{
-		margin: 10px;
-		border: 1px solid #D0D0D0;
-		-webkit-box-shadow: 0 0 8px #D0D0D0;
-	}
-	</style>
-</head>
-<body>
-
-<div id="container">
-	<h1>Bienvenido</h1>
-
-	<div id="body">
-		<p>Sistema de  Gestión de Bitacoras</p>
-
-		<p>Inicio de sesión:</p>
-		<?php echo validation_errors(); ?>
-		<?php echo form_open('verifylogin'); ?>
-		     <label for="correo">Usuario:</label>
-		     <input type="text" size="20" id="correo" name="correo"/>
-		     <br/>
-		     <label for="password">Password:</label>
-		     <input type="password" size="20" id="passowrd" name="password"/>
-		     <br/>
-		     <input type="submit" value="Login"/>
-		   </form>
-
-		<p>Proximamente va a estar bien bonis</a>.</p>
-	</div>
-
-	<p class="footer">Derechos reservados</p>
-</div>
-
-</body>
-</html>
+							<?php echo validation_errors(); ?>
+							<?php echo form_open('verifylogin'); ?>
+							  <table width="100%" border="0">
+							    <tr>
+							      <td><div align="right">Usuario</div></td>
+							      <td><label for="correo"></label>
+						            <div align="left">
+						              <input type="textfield" size="20" id="correo" name="correo"/>
+				                  </div></td>
+						        </tr>
+							    <tr>
+							      <td><div align="right">Contraseña</div></td>
+							      <td><label for="password"></label>
+						            <div align="left">
+						              <input type="password" size="20" id="passowrd" name="password"/>
+				                  </div></td>
+						        </tr>
+							    <tr>
+							      <td colspan="2"><input type="submit" name="button" id="button" value="          Iniciar Sesión          " /></td>
+						        </tr>
+						      </table>
+							</form>
+			            </div>
+					</div>
+					<div id="copyright">
+						<span>&copy; Derechos Reservados Instituto Tecnológico de Morelia</span>
+					</div>
+				</div>
+			</div>
+		</body>
+	</html>
 
