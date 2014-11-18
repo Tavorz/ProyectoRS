@@ -7,9 +7,9 @@
 			$fields = array(
  
             'id' => array(
-                'type'          => 'INT',
-                'constraint'    => 10,
-                'unsigned'      => TRUE,
+                'type' => 'INT',
+                'constraint' => 10,
+                'unsigned' => TRUE,
                 'auto_increment'=> TRUE
             ),
  

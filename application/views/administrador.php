@@ -2,7 +2,7 @@
 	<html>
 		<head>
 			<meta charset="UTF-8">
-			<title><?=$page_title?></title>
+			<title>Administrador</title>
 		</head>
 		<body>
 			<form name="tabla" action="" method="POST">
@@ -21,12 +21,12 @@
  					<?php foreach ($usuarios as $u):?>
  					<tr>
  						<!-- <td><input type="radio" name="editar" value="<?=$u->RFC?>"/></td> -->
-  						<td><?=$u->RFC?></td>
-						<td><?=$u->cargoID?></td>
-						<td><?=$u->nombre?></td>
-						<td><?=$u->apellidoPaterno?></td>
-						<td><?=$u->apellidoMaterno?></td>
-						<td><?=$u->correoElectronico?></td>
+  						<td><?php=$u->RFC?></td>
+						<td><?php=$u->cargoID?></td>
+						<td><?php=$u->nombre?></td>
+						<td><?php=$u->apellidoPaterno?></td>
+						<td><?php=$u->apellidoMaterno?></td>
+						<td><?php=$u->correoElectronico?></td>
  					</tr>
  					<?php endforeach;?>
  					</tbody>

@@ -8,7 +8,6 @@
             $this->load->database();
             $this->usuario();
             echo 1;
-    
         }
 
         function usuario() {
@@ -48,8 +47,7 @@
                     'correo' => 'maria@itm.com'
                 )
             );
-            $this->db->insert_batch($table, $users);
-            
+            $this->db->insert_batch($table, $users);     
         }
 
     }

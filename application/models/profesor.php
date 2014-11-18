@@ -66,7 +66,7 @@
 		}
 
 		function login($correo, $password) {
-	   		$this->db-> select('id, rfc, password');
+	   		$this->db-> select('id, correo, password');
 	   		$this->db-> from('profesor');
 	   		$this->db-> where('correo', $correo);
 	   		$this->db-> where('password', MD5($password));

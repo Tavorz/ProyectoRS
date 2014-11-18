@@ -26,12 +26,12 @@
 	 					<tr>
 
 	 						
-	  						<td><?=$profesor->rfc?></td>
-							<td><?=$profesor->cargo?></td>
-							<td><?=$profesor->nombre?></td>
-							<td><?=$profesor->apellido_paterno?></td>
-							<td><?=$profesor->apellido_materno?></td>
-							<td><?=$profesor->correo?></td>
+	  						<td><?php echo $profesor->rfc;?></td>
+							<td><?php echo $profesor->cargo;?></td>
+							<td><?php echo $profesor->nombre;?></td>
+							<td><?php echo $profesor->apellido_paterno;?></td>
+							<td><?php echo $profesor->apellido_materno;?></td>
+							<td><?php echo $profesor->correo;?></td>
 	 					</tr>
 	 					<?php endforeach;?>
 	 					</tbody>

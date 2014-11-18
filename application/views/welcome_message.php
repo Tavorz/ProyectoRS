@@ -35,7 +35,7 @@
 			            <div id="container">
 
 							<?php echo validation_errors(); ?>
-							<?php echo form_open('verifylogin'); ?>
+							<?php echo form_open('login'); ?>
 							  <table width="100%" border="0">
 							    <tr>
 							      <td><div align="right">Usuario</div></td>
