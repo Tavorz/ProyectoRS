@@ -45,16 +45,13 @@
 		    }
 	    }
 
-	    function is_logged() {
-	   		if(!$this->session->userdata('logged_in')) {
-	   			redirect('login', 'refresh');
-	   		}
-	   	}
 
 	    function logout() {
 	   		$this->session->unset_userdata('logged_in');
-	   		session_destroy();
-	   			   		die('A');
+	   		session_unset();
+	   		
+	   		//session_destroy();
+	   		//	   		die('A');
 	   		redirect('administrador', 'refresh');
 	 	}
  

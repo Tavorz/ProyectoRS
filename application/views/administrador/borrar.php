@@ -41,11 +41,14 @@
 	 			Para confirmar ingresa el RFC
 	 			<table>
 					<tr>
-						<td>RFC: </td><td><input name="txtRFC" type="text"/></td>
+						<td>RFC: </td><td><input name="rfc" type="text"/></td>
 					</tr>
 				</table>
 			 	<input type="submit" value="Borrar" />
 			</form>
+
+						<br>
+			<a href="<?php echo site_url("administrador/profesores_admin"); ?>">Regresar</a>
 		</body>
 	</html>
 

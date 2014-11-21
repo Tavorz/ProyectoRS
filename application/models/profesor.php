@@ -19,40 +19,21 @@
 		}
 
 		function insert() {
-			$data['rfc'] = $_POST['txtRFC'];
-			$data['cargo'] = $_POST['txtCargo'];
-			$data['nombre'] = $_POST['txtNombre'];
-			$data['apellido_paterno'] = $_POST['txtApellidoPaterno'];
-			$data['apellido_materno'] = $_POST['txtApellidoMaterno'];
-			$data['correo'] = $_POST['txtEmail'];
-			$data['password'] = md5($_POST['txtEmail']);
-
-			$this->db->set('rfc', $data['rfc']);
-			$this->db->set('cargo', $data['cargo']);
-			$this->db->set('nombre', $data['nombre']);
-			$this->db->set('apellido_paterno', $data['apellido_paterno']);
-			$this->db->set('apellido_materno', $data['apellido_materno']);
-			$this->db->set('correo', $data['correo']);
-			$this->db->set('password', $data['password']);
-			$this->db->insert('profesor');
+			$data = $this->input->post();
+			$data['password'] = md5($data['correo']);
+			$this->db->insert('profesor', $data);
 		}
 
 		function delete($data) {
-			$data = $_POST['txtRFC'];
+			$data = $_POST['rfc'];
 			$this->db->where('rfc', $data);
 		 	$this->db->delete('profesor');
 		}
 
 
 		function update($data) {
-			$data['id'] = $_POST['id'];
-			$data['rfc'] = $_POST['txtRFC'];
-			$data['cargo'] = $_POST['txtCargo'];
-			$data['nombre'] = $_POST['txtNombre'];
-			$data['apellido_paterno'] = $_POST['txtApellidoPaterno'];
-			$data['apellido_materno'] = $_POST['txtApellidoMaterno'];
-			$data['correo'] = $_POST['txtEmail'];
-			$data['password'] =md5($_POST['txtPassword']);
+			$data = $this->input->post();
+			$data['password'] =md5($_POST['password']);
 
 			$this->db->set('rfc', $data['rfc']);
 			$this->db->set('cargo', $data['cargo']);

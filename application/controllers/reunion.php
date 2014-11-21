@@ -1,11 +1,10 @@
 <?php if ( ! defined('BASEPATH')) exit('No direct script access allowed');
 
-	class Administrador extends CI_Controller {
+	class Reunion extends CI_Controller {
 	 
 		function __construct() {
 			parent::__construct();
 			$this->is_logged();
-	 		$this->load->model('profesor');
 	 		$this->load->model('reunion');
 
 	    }
@@ -19,13 +18,13 @@
 		function index() {	 
 	 		$session_data = $this->session->userdata('logged_in');
 	 		$data['correo'] = $session_data['correo'];
-	 		$this->load->model('profesor'); 
-			$profesores = $this->profesor->get_all(); 		 
-			$data['profesores'] = $profesores;	
-			$this->load->view('administrador/index', $data);
+	 		$this->load->model('reunion'); 
+			$reuniones = $this->reunion->get_all_reunion(); 		 
+			$data['reuniones'] = $reuniones;	
+			$this->load->view('administrador/reunion', $data);
 		}
 
-		function profesores_admin() {
+		function reuniones_admin() {
 			$session_data = $this->session->userdata('logged_in');
 	 		$data['correo'] = $session_data['correo'];
 	 		$this->load->model('profesor'); 
@@ -67,14 +66,11 @@
 			$data['profesor'] = $this->profesor->obtener_profesor($id);
 			$this->load->view('administrador/modificar', $data);
 		}
-
-		function reuniones_admin() {
-			$session_data = $this->session->userdata('logged_in');
-	 		$data['correo'] = $session_data['correo'];
-	 		$this->load->model('reunion'); 
+		
+		function reuniones() { 
 			$reuniones = $this->reunion->get_all_reunion(); 		 
-			$data['reuniones'] = $reuniones;	
-			$this->load->view('administrador/reunion', $data);
+			$data['reuniones'] = $reuniones;
+			$this->load->view('administrador/reunion', $data);	
 		}
 
 		function mostrar_alta_reunion() {
@@ -83,41 +79,10 @@
 
 		function alta_reunion() {
 			$this->reunion->insert_reunion();
-			redirect('administrador/reuniones_admin');
+			redirect('administrador/index');
 		}
-
-
-		function mostrar_modificar_reunion($id){
-			$data['reunion'] = $this->reunion->obtener_reunion($id);
-			$this->load->view('administrador/modificar_reunion', $data);
-		}
-
-		function editar_reunion() {
-			$this->load->model('reunion');
-			$this->reunion->update_reunion($data);
-			redirect('administrador/reuniones_admin');
-		}
-
-
-		function mostrar_baja_reunion($id) {
-			$reuniones = $this->reunion->obtener_reunion($id); 		 
-			$data['reuniones'] = $reuniones;
-			$data['id'] = $id;
-			$this->load->view('administrador/baja_reunion', $data);
-		}
-
-		function borrar_reunion(){
-			$this->reunion->delete_reunion($data);
-			redirect('administrador/reuniones_admin');
-		}
-
-
-
-
-
-
-	
 	}
 ?>
 
 
+		
